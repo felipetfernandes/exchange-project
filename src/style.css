@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(50, 50, 50);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main>h1 {
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 79px;
+    margin-top: 63px;
+    margin-bottom: 28px;
+}
+
+main>p {
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+main>.wrapper-input {
+    margin-bottom: 57px;
+}
+
+main>.wrapper-input>input {
+    width: 171px;
+    height: 48px;
+    background: rgba(217, 217, 217, 0.1);
+    border-radius: 10px;
+    border: none;
+    padding: 13px 17px;
+    color: white;
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+main>.wrapper-input>input::placeholder {
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+main>.wrapper-input>button {
+    width: 171px;
+    height: 48px;
+    background: #96EB95;
+    border: none;
+    border-radius: 10px;
+    margin-left: 10px;
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: #373737;
+}
+
+#cotacoes {
+    width: 900px;
+    height: 583px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0 39px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+}
+
+#cotacoes::-webkit-scrollbar {
+    width: 5px;
+    height: 100%;
+}
+
+#cotacoes::-webkit-scrollbar-track {
+    background: rgb(100, 100, 100);
+}
+
+#cotacoes::-webkit-scrollbar-thumb {
+    border: 3px solid rgb(55, 55, 55);
+}
+
+#cotacoes>h2 {
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    margin-top: 24px;
+    margin-bottom: 28px;
+}
+
+.wrapper-cotes {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 14px;
+}
+
+.wrapper-cotes>div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 150px;
+    height: 44px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.moeda {
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.valor {
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    color: #FFE713;
+}
