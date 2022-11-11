@@ -6,13 +6,9 @@ const button = document.querySelector('button');
 const gride = document.querySelector('.wrapper-cotes');
 const h2 = document.querySelector('h2');
 
-
-// https://api.exchangerate.host/convert?from=USD&to=EUR
-
 const returnCotes = () => {
     fetch(`https://api.exchangerate.host/latest?base=${base.value}`)
     .then((response) => response.json())
-    .catch((erro) => console.log(erro))
     .then((date) => {
         try {
             gride.innerHTML = '';
@@ -31,11 +27,11 @@ const returnCotes = () => {
 const createElement = (obj) => {
     if (!base.value) throw new Error('Você precisa informar uma moeda!')
     const currents = Object.keys(obj)
-    if (!currents.includes(base.value)) throw new Error('Moeda inválida')
+    if (!currents.includes(base.value.toLocaleUpperCase())) throw new Error('Moeda inválida')
     currents.forEach((current) => {
         if (current !== base.value) {
             const cote = document.createElement('div')
-            cote.innerHTML = `<img src="src/coins.svg"><p class="moeda">${current}</p><p class="valor">${obj[current]}</p>`
+            cote.innerHTML = `<img src="./src/coins.svg"><p class="moeda">${current}</p><p class="valor">${obj[current]}</p>`
             gride.appendChild(cote)
         }
     })
@@ -43,3 +39,6 @@ const createElement = (obj) => {
 }
 
 button.addEventListener('click', returnCotes)
+base.addEventListener('keypress', event => {
+    if(event.key === 'Enter') returnCotes();
+});

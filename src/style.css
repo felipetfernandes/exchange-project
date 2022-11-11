@@ -79,7 +79,7 @@ main>.wrapper-input>button {
     width: 900px;
     height: 583px;
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 0 39px;
+    padding: 0 39px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
